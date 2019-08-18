@@ -22,19 +22,19 @@ pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
 #  Enter variables
-playlistName = 'Wedding'
-username = 'hugh_a_graham'
-newPlName = 'wedding 2hrb'
-desired_dur = 120 # in minutes
-sortby = 'energy'
+playlistName = 'PlaylisName'
+username = 'YouUserName'
+newPlName = 'NewPlaylistName'
+desired_dur = 120 # Playlist length in minutes
+sortby = 'energy' # audio attribute see: https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/
 
 def Credentials():
 
     token = util.prompt_for_user_token(
-        username='hugh_a_graham',
+        username = username,
         scope='playlist-modify-private playlist-modify-public',
-        client_id='f51dd86ec0f8458b9fb561a8f507ccfc',
-        client_secret='28cfa5fbcda64af285040e5c31b2a61b',
+        client_id='...client.id...',
+        client_secret='...client.secret...',
         redirect_uri='http://localhost/')
 
     if token:
